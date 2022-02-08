@@ -1,0 +1,66 @@
+<br>
+<br>
+
+<!-- Personal details -->
+
+<div class="container"  style = "background-color: rgba(0, 0, 0, 1); color:aliceblue; padding: 30px;">
+  <h2 class="text-center font-weight-bold">Register</h2>
+  <form class="was-validated" #frm="ngForm">
+    <div class="form-group font-weight-bold" >
+      <label for="name">Name:</label>
+      <input
+        type="text"
+        class="form-control"
+        [(ngModel)]="tempResDetails.name"
+        placeholder="Enter Your Name"
+        id="name"
+        [ngModelOptions]="{ standalone: true }"
+        required
+      />
+      <div class="valid-feedback">Valid.</div>
+      <div class="invalid-feedback">Please fill out this field.</div>
+    </div>
+   
+    <div class="form-group font-weight-bold">
+      <label for="email">Email address:</label>
+      <input
+        type="email"
+        class="form-control"
+        [(ngModel)]="tempResDetails.email"
+        placeholder="Enter email"
+        id="email"
+        [ngModelOptions]="{ standalone: true }"
+        required
+      />
+      <div class="valid-feedback">Valid.</div>
+      <div class="invalid-feedback">Please fill out this field.</div>
+    </div>
+    <div class="form-group font-weight-bold">
+      <label for="pwd">Password:</label>
+      <input
+        type="password"
+        class="form-control"
+        [(ngModel)]="tempResDetails.pwd"
+        placeholder="Enter password"
+        id="pwd"
+        [ngModelOptions]="{ standalone: true }"
+        minlength="8"
+        #pwds="ngModel"
+        required
+      />
+      <div class="valid-feedback">Valid.</div>
+      <div class="invalid-feedback">Please fill out this field.</div>
+      <div *ngIf="pwds.invalid && (pwds.dirty || pwds.touched)">
+        <div class="alert alert-danger" *ngIf="pwds.errors?.['required'] ">
+          Password is Required.
+        </div>
+        <div class="alert alert-danger" *ngIf="pwds.errors?.['minlength'] ">
+          Password needs to have 8 chars.
+        </div>
+      </div>
+    </div>
+    <button type="submit" class="btn btn-primary btn-block " (click)="addTo()">
+      Register
+    </button>
+  </form>
+</div>
