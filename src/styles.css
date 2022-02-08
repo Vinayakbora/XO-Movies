@@ -1,0 +1,9 @@
+@import "~bootstrap/dist/css/bootstrap.css";
+
+
+body{
+    background-color: blueviolet;
+    background-image: url('xox.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
