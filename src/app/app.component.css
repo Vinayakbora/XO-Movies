@@ -1,0 +1,26 @@
+
+* {
+    box-sizing: border-box;
+    font-family: arial, sans-serif;
+}
+
+.row{
+    display: flex;
+}
+
+.row1{
+    height:130px;
+}
+
+.column{
+    padding-left: 30px;
+    flex: 50%;
+    height: 550px;
+}
+
+.heading{
+    padding: 20px;
+    text-align: center;
+}
+
+  

@@ -1,0 +1,41 @@
+
+* {
+    box-sizing: border-box;
+    font-family: arial, sans-serif;
+}
+
+.row{
+    display: flex;
+}
+
+.row1{
+    height:130px;
+}
+
+.column{
+    padding-left: 30px;
+    flex: 50%;
+    height: 550px;
+}
+
+.heading{
+    padding: 20px;
+    text-align: center;
+}
+.button {
+
+    background-color: white;
+    color: black;
+    border: 2px solid #555555;
+  }
+
+table{
+    width: 100%;
+    padding: 0px 10px;
+}
+
+  .scrollit {
+    overflow:scroll;
+
+}
+  
